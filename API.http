@@ -1,0 +1,46 @@
+@base_address = http://localhost:8080
+
+### Получить список всех водителей
+GET {{base_address}}/drivers
+
+### Создать нового водителя 1
+POST {{base_address}}/drivers
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Driver1",
+  "carType": "Sedan",
+  "horsePower": 150
+}
+
+### Создать нового водителя2
+POST {{base_address}}/drivers
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Driver2",
+  "carType": "Sedan",
+  "horsePower": 160
+}
+
+### Получить информацию о водителе по ID 1
+GET {{base_address}}/drivers/1
+
+### Получить информацию о водителе по ID 2
+GET {{base_address}}/drivers/2
+
+### Получить список всех гонок
+GET {{base_address}}/races
+
+### Создать новую гонку
+POST {{base_address}}/races
+Content-Type: application/json
+
+{
+  "label": "Sedan"
+}
+
+### Получить информацию о гонке по ID
+GET {{base_address}}/races/1
